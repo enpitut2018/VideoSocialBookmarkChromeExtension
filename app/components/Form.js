@@ -3,6 +3,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TodoActions from '../actions/todos';
 import style from './Form.css';
+import axios from 'axios';
+
+const backend_api_url = 'https://video-social-bookmark.herokuapp.com/api/v1';
 
 @connect(
   state => ({
@@ -31,7 +34,17 @@ export default class Form extends Component {
       console.log(tab);
       const comment = this.state.comment;
       const url = tab.url;
-      alert(`A name was submitted: ${comment}, ${url}`);
+      axios
+      .post(`${backend_api_url}/bookmarks`, {
+        original_url: url,
+        comment
+      })
+      .then((res) => {
+        alert(`A new bookmark was submitted: ${comment}, ${url}`);
+      })
+      .catch((_) => {
+        // error
+      });
     });
     event.preventDefault();
   }

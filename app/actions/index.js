@@ -12,7 +12,7 @@ const getUrl = async () => new Promise((resolve) => {
   });
 });
 
-const fetchEntryId = async () => 8;
+const fetchEntryId = async () => 5;
 
 export const setToken = () => (dispatch) => {
   const keys = ['access-token', 'token-type', 'client', 'expiry', 'uid'];

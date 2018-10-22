@@ -24,16 +24,14 @@ export default class SignIn extends Component {
 
   submitForm = async (e) => {
     e.preventDefault();
-    const res = await this.props.signInUser({
+    await this.props.signInUser({
       email: this.state.email,
       password: this.state.password
+    }).then((res) => {
+      this.props.signIn();
     }).catch((res) => {
       // error
     });
-    if (res === undefined) {
-      this.props.signIn();
-      this.setState({ email: '', password: '' });
-    }
   };
 
   handleEmailChange = (event) => {

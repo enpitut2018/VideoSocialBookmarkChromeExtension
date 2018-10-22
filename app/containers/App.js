@@ -17,7 +17,7 @@ export default class App extends React.Component {
 
   static propTypes = {
     setToken: PropTypes.func.isRequired,
-    isLoggedIn: PropTypes.boolean
+    isLoggedIn: PropTypes.bool.isRequired
   };
 
   componentDidMount = () => {
@@ -32,11 +32,9 @@ export default class App extends React.Component {
           <SignIn />
         }
         {this.props.isLoggedIn &&
-          <div>
-            <Form />
-            <CommentList />
-          </div>
+          <Form />
         }
+        <CommentList />
       </Popup>
     );
   }

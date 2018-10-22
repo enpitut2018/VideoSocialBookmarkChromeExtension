@@ -30,10 +30,11 @@ export default class Form extends Component {
 
   handleSubmit(event) {
     chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+      console.log(chrome);
       const tab = tabs[0];
       console.log(tab);
       const comment = this.state.comment;
-      const url = tab.url;
+      const url = 'https://video-social-bookmark.herokuapp.com/login';//tab.url;
       axios
       .post(`${backend_api_url}/bookmarks`, {
         original_url: url,

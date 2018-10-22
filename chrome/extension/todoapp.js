@@ -5,7 +5,19 @@ import './todoapp.css';
 
 chrome.storage.local.get('state', (obj) => {
   const { state } = obj;
-  const initialState = JSON.parse(state || '{}');
+  const initialState = Object.assign(
+    JSON.parse(state || '{}'),
+    {
+      reduxTokenAuth: {
+        currentUser: {
+          isLoading: false,
+          isSignedIn: false,
+          attributes: {
+          },
+        },
+      },
+    }
+  );
 
   const createStore = require('../../app/store/configureStore');
 

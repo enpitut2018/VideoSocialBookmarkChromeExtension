@@ -8,6 +8,7 @@ import Form from '../components/Form';
 import * as TodoActions from '../actions/todos';
 import style from './App.css';
 import SignInScreen from '../components/SignIn';
+import CommentList from '../components/CommentList';
 
 @connect(
   state => ({
@@ -36,6 +37,7 @@ export default class App extends Component {
       <div>
         <SignInScreen />
         <Form />
+        <CommentList />
       </div>
     );
   }

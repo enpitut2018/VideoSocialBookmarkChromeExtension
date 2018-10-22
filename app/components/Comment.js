@@ -1,10 +1,11 @@
-import React, { Component, PropTypes } from 'react';
-import style from './CommentList.css';
+import React, { PropTypes } from 'react';
 
-export default class Comment extends Component {
-  constructor(props) {
-    super(props);
-  }
+export default class Comment extends React.Component {
+
+  static propTypes = {
+    bookmark: PropTypes.object.isRequired
+  };
+
   render() {
     return (
       <div>

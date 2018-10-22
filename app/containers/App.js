@@ -1,44 +1,43 @@
-import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
+import { setToken } from '../actions';
+import Popup from '../components/Popup';
 import Header from '../components/Header';
-import MainSection from '../components/MainSection';
 import Form from '../components/Form';
-import * as TodoActions from '../actions/todos';
-import style from './App.css';
-import SignInScreen from '../components/SignIn';
+import SignIn from '../components/SignIn';
 import CommentList from '../components/CommentList';
 
 @connect(
   state => ({
-    todos: state.todos
+    isLoggedIn: state.user.isLoggedIn,
   }),
-  dispatch => ({
-    actions: bindActionCreators(TodoActions, dispatch)
-  })
+  { setToken }
 )
-export default class App extends Component {
+export default class App extends React.Component {
 
   static propTypes = {
-    todos: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired
+    setToken: PropTypes.func.isRequired,
+    isLoggedIn: PropTypes.boolean
   };
 
+  componentDidMount = () => {
+    this.props.setToken();
+  }
+
   render() {
-    const { todos, actions } = this.props;
-
-    const keys = ['access-token', 'token-type', 'client', 'expiry', 'uid'];
-    for (const key of keys) {
-      axios.defaults.headers.common[key] = window.localStorage.getItem(key);
-    }
-
     return (
-      <div>
-        <SignInScreen />
-        <Form />
-        <CommentList />
-      </div>
+      <Popup>
+        <Header />
+        {!this.props.isLoggedIn &&
+          <SignIn />
+        }
+        {this.props.isLoggedIn &&
+          <div>
+            <Form />
+            <CommentList />
+          </div>
+        }
+      </Popup>
     );
   }
 }

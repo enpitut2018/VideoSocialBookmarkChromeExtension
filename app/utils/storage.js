@@ -3,9 +3,9 @@ function saveState(state) {
 }
 
 // todos unmarked count
-function setBadge(todos) {
+function setBadge(entry) {
   if (chrome.browserAction) {
-    const count = todos.filter(todo => !todo.marked).length;
+    const count = entry.bookmarks ? entry.bookmarks.length : 0;
     chrome.browserAction.setBadgeText({ text: count > 0 ? count.toString() : '' });
   }
 }
@@ -16,7 +16,7 @@ export default function () {
     store.subscribe(() => {
       const state = store.getState();
       saveState(state);
-      setBadge(state.todos);
+      setBadge(state.entry);
     });
     return store;
   };

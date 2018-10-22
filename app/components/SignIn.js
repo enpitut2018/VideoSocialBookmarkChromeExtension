@@ -1,8 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { signInUser } from '../redux-token-auth-config'; // <-- note this is YOUR file, not the redux-token-auth NPM module
+import { signInUser } from '../utils/redux-token-auth-config';
+import { signIn } from '../actions';
 
-class SignInScreen extends Component {
+@connect(
+  null,
+  { signInUser, signIn },
+)
+export default class SignIn extends Component {
+
+  static propTypes = {
+    signInUser: PropTypes.func.isRequired,
+    signIn: PropTypes.func.isRequired,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -13,13 +24,17 @@ class SignInScreen extends Component {
 
   submitForm = async (e) => {
     e.preventDefault();
-    const { signInUser } = this.props;
-    const {
-      email,
-      password,
-    } = this.state;
-    await signInUser({ email, password });
-  }
+    const res = await this.props.signInUser({
+      email: this.state.email,
+      password: this.state.password
+    }).catch((res) => {
+      // error
+    });
+    if (res === undefined) {
+      this.props.signIn();
+      this.setState({ email: '', password: '' });
+    }
+  };
 
   handleEmailChange = (event) => {
     this.setState({ email: event.target.value });
@@ -39,7 +54,7 @@ class SignInScreen extends Component {
           </label>
           <label>
             Password:
-            <input type="text" value={this.state.password} onChange={this.handlePasswordChange} />
+            <input type="password" value={this.state.password} onChange={this.handlePasswordChange} />
           </label>
           <input type="submit" value="Submit" />
         </form>
@@ -47,8 +62,3 @@ class SignInScreen extends Component {
     );
   }
 }
-
-export default connect(
-  null,
-  { signInUser },
-)(SignInScreen);

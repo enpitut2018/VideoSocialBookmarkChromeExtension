@@ -1,4 +1,8 @@
-# React Chrome Extension Boilerplate
+# Video Social Bookmark Chrome Extension
+
+**this project use ↓ boilerplate**
+
+## React Chrome Extension Boilerplate
 
 [![Build Status](https://travis-ci.org/jhen0409/react-chrome-extension-boilerplate.svg?branch=master)](https://travis-ci.org/jhen0409/react-chrome-extension-boilerplate)
 [![Build status: Windows](https://ci.appveyor.com/api/projects/status/b5xy6ev6oykth0d2/branch/master?svg=true)](https://ci.appveyor.com/project/jhen0409/react-chrome-extension-boilerplate/branch/master)

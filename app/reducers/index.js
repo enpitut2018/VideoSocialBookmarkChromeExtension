@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import { reduxTokenAuthReducer } from 'redux-token-auth';
-import todos from './todos';
+import entry from './entry';
+import user from './user';
 
 export default combineReducers({
-  todos,
+  user,
+  entry,
   reduxTokenAuth: reduxTokenAuthReducer
 });

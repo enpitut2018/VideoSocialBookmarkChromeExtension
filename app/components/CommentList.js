@@ -1,44 +1,30 @@
-import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
-import * as TodoActions from '../actions/todos';
-import style from './CommentList.css';
 import Comment from '../components/Comment';
-
-const backend_api_url = 'https://video-social-bookmark.herokuapp.com/api/v1';
+import { fetchEntry } from '../actions';
 
 @connect(
   state => ({
-    todos: state.todos
+    entry: state.entry
   }),
-  dispatch => ({
-    actions: bindActionCreators(TodoActions, dispatch)
-  })
+  { fetchEntry }
 )
-export default class Form extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { entry: null };
-    this.fetchEntry();
+export default class Form extends React.Component {
+
+  static propTypes = {
+    entry: PropTypes.object.isRequired,
+    fetchEntry: PropTypes.func.isRequired
+  };
+
+  componentDidMount = () => {
+    this.props.fetchEntry();
   }
 
-  fetchEntry = () => axios
-    .get(`${backend_api_url}/entries/8`)
-    .then((res) => {
-      console.log(res);
-      this.setState({ entry: res.data });
-    })
-    .catch((res) => {
-      console.log(res);
-    })
-
   render() {
-    console.log('hey', this.state);
     return (
       <div>
-        {this.state.entry &&
-          this.state.entry.bookmarks.map(bookmark => (
+        {this.props.entry &&
+          this.props.entry.bookmarks.map(bookmark => (
             <Comment bookmark={bookmark} key={bookmark.id} />
         ))}
       </div>

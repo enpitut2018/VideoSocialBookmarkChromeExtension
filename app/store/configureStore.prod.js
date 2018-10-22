@@ -2,7 +2,7 @@ import { applyMiddleware, createStore, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 import storage from '../utils/storage';
-import { verifyCredentials } from '../redux-token-auth-config';
+import { verifyCredentials } from '../utils/redux-token-auth-config';
 
 const middlewares = applyMiddleware(thunk);
 const enhancer = compose(

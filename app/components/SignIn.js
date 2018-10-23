@@ -18,9 +18,9 @@ export class SignIn extends Component {
     };
   }
 
-  submitForm = async (e) => {
+  submitForm = (e) => {
     e.preventDefault();
-    await this.props.signInUser({
+    this.props.signInUser({
       email: this.state.email,
       password: this.state.password
     }).then((res) => {

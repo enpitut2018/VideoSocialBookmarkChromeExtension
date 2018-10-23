@@ -38,5 +38,6 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   const result = await isInjected(tabId);
   if (chrome.runtime.lastError || result[0]) return;
 
+  // eslint-disable-next-line no-console
   loadScript('inject', tabId, () => console.log('load inject bundle success!'));
 });

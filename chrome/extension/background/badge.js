@@ -47,7 +47,6 @@ chrome.runtime.onMessage.addListener(async (req, sender, res) => {
 });
 
 chrome.tabs.onActivated.addListener(async (activeInfo) => {
-  console.log('update');
   const entry = await fetchEntry();
   if (entry) currentTabEntry = entry;
   if (entry && entry.bookmarks) {

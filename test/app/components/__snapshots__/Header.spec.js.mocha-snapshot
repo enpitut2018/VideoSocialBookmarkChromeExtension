@@ -1,0 +1,48 @@
+exports["should render correctly(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "header",
+    "props": {
+      "children": {
+        "type": "a",
+        "props": {
+          "href": "https://video-social-bookmark.herokuapp.com",
+          "children": "VideoSocialBookmark"
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "host",
+      "type": "a",
+      "props": {
+        "href": "https://video-social-bookmark.herokuapp.com",
+        "children": "VideoSocialBookmark"
+      },
+      "rendered": "VideoSocialBookmark"
+    }
+  },
+  "type": "header",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "a",
+        "props": {
+          "href": "https://video-social-bookmark.herokuapp.com",
+          "children": "VideoSocialBookmark"
+        },
+        "rendered": "VideoSocialBookmark"
+      },
+      "type": "a",
+      "props": {
+        "href": "https://video-social-bookmark.herokuapp.com"
+      },
+      "children": [
+        "VideoSocialBookmark"
+      ]
+    }
+  ]
+};
+

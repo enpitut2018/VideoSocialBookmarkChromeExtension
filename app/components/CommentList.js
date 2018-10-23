@@ -3,16 +3,12 @@ import { connect } from 'react-redux';
 import Comment from '../components/Comment';
 import { fetchEntry } from '../actions';
 
-@connect(
-  state => ({
-    entry: state.entry
-  }),
-  { fetchEntry }
-)
-export default class Form extends React.Component {
+export class CommentList extends React.Component {
 
   static propTypes = {
-    entry: PropTypes.object.isRequired,
+    entry: PropTypes.shape({
+      bookmarks: PropTypes.array
+    }),
     fetchEntry: PropTypes.func.isRequired
   };
 
@@ -31,3 +27,10 @@ export default class Form extends React.Component {
     );
   }
 }
+
+export default connect(
+  state => ({
+    entry: state.entry
+  }),
+  { fetchEntry }
+)(CommentList);

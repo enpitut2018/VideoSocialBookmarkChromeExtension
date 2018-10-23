@@ -1,0 +1,72 @@
+exports["should render correctly(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "style": {
+        "font": "14px Helvetica Neue, Helvetica, Arial, sans-serif",
+        "lineHeight": "1.4em",
+        "background": "#f5f5f5",
+        "color": "#4d4d4d",
+        "minWidth": "230px",
+        "maxWidth": "550px",
+        "margin": "0 auto",
+        "WebkitFontSmoothing": "antialiased",
+        "MozFontSmoothing": "antialiased",
+        "msFontSmoothing": "antialiased",
+        "fontSmoothing": "antialiased",
+        "fontWeight": 300
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "children": "Hello"
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "host",
+      "type": "div",
+      "props": {
+        "children": "Hello"
+      },
+      "rendered": "Hello"
+    }
+  },
+  "type": "div",
+  "props": {
+    "style": {
+      "font": "14px Helvetica Neue, Helvetica, Arial, sans-serif",
+      "lineHeight": "1.4em",
+      "background": "#f5f5f5",
+      "color": "#4d4d4d",
+      "minWidth": "230px",
+      "maxWidth": "550px",
+      "margin": "0 auto",
+      "WebkitFontSmoothing": "antialiased",
+      "MozFontSmoothing": "antialiased",
+      "msFontSmoothing": "antialiased",
+      "fontSmoothing": "antialiased",
+      "fontWeight": 300
+    }
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": "Hello"
+        },
+        "rendered": "Hello"
+      },
+      "type": "div",
+      "props": {},
+      "children": [
+        "Hello"
+      ]
+    }
+  ]
+};
+

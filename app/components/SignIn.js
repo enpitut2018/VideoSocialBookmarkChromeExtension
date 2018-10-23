@@ -3,11 +3,7 @@ import { connect } from 'react-redux';
 import { signInUser } from '../utils/redux-token-auth-config';
 import { signIn } from '../actions';
 
-@connect(
-  null,
-  { signInUser, signIn },
-)
-export default class SignIn extends Component {
+export class SignIn extends Component {
 
   static propTypes = {
     signInUser: PropTypes.func.isRequired,
@@ -60,3 +56,8 @@ export default class SignIn extends Component {
     );
   }
 }
+
+export default connect(
+  null,
+  { signInUser, signIn },
+)(SignIn);

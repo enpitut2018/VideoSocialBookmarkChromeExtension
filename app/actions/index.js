@@ -12,31 +12,26 @@ const getUrl = async () => new Promise((resolve) => {
   });
 });
 
-export const setToken = () => (dispatch) => {
+export const signIn = () => (dispatch) => {
+  if (window.localStorage.getItem('access-token') === null) return;
   const keys = ['access-token', 'token-type', 'client', 'expiry', 'uid'];
   for (const key of keys) {
     axios.defaults.headers.common[key] = window.localStorage.getItem(key);
   }
-};
-
-export const signIn = () => (dispatch) => {
   dispatch({ type: SIGNIN });
-  dispatch(setToken());
 };
 
 export const post = comment => async (dispatch) => {
   const url = await getUrl();
-  axios
+  return await axios
   .post(`${apiUrl}/bookmarks`, {
     original_url: url,
     comment
   })
-  .then((res) => {
-    // success
-  })
-  .catch((_) => {
-    // error
-  });
+  .then(res => ({ status: 'SUCCESS' }))
+  .catch(err => ({
+    status: 'ERROR',
+    message: err }));
 };
 
 export const fetchEntry = () => (dispatch) => {

@@ -13,4 +13,5 @@ const enhancer = compose(
 export default function (initialState) {
   const store = createStore(rootReducer, initialState, enhancer);
   verifyCredentials(store);
+  return store;
 }

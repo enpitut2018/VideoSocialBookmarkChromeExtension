@@ -1,4 +1,5 @@
 # Video Social Bookmark Chrome Extension
+[![Build Status](https://travis-ci.com/enpitut2018/VideoSocialBookmarkChromeExtension.svg?branch=master)](https://travis-ci.com/enpitut2018/VideoSocialBookmarkChromeExtension)
 
 **this project use ↓ boilerplate**
 

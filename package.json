@@ -1,7 +1,7 @@
 {
-  "name": "react-chrome-extension-boilerplate",
-  "version": "0.9.0",
-  "description": "Boilerplate for Chrome extension React.js project",
+  "name": "video-social-bookmark-chrome-extension",
+  "version": "0.0.0",
+  "description": "Chrome extension for bookmark any video with VideoSocialBookmark",
   "scripts": {
     "dev": "node scripts/dev",
     "build": "node scripts/build",
@@ -12,21 +12,6 @@
     "test-e2e": "cross-env NODE_ENV=test mocha -r ./test/setup-app test/e2e",
     "test": "cross-env NODE_ENV=test mocha -r ./test/setup-app test/app"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jhen0409/react-chrome-extension-boilerplate.git"
-  },
-  "keywords": [
-    "chrome",
-    "extension",
-    "react",
-    "redux",
-    "hot reload",
-    "webpack",
-    "boilerplate"
-  ],
-  "author": "Jhen <developer@jhen.me>",
-  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.3.15",
     "babel-eslint": "^7.1.0",
@@ -64,16 +49,16 @@
     "style-loader": "^0.13.1",
     "webpack": "^3.10.0",
     "webpack-hot-middleware": "^2.10.0",
-    "webpack-httpolyglot-server": "^0.3.0"
+    "webpack-httpolyglot-server": "^0.3.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "mocha-snapshots": "^4.1.0"
   },
   "dependencies": {
     "autoprefixer": "^7.2.5",
     "axios": "^0.18.0",
     "bluebird": "^3.3.4",
     "classnames": "^2.1.3",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0",
-    "mocha-snapshots": "^4.1.0",
     "prop-types": "^15.6.2",
     "react": "^15.0.2",
     "react-dock": "^0.2.3",

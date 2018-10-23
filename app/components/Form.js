@@ -2,11 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { post } from '../actions';
 
-@connect(
-  null,
-  { post }
-)
-export default class Form extends React.Component {
+export class Form extends React.Component {
 
   static propTypes = {
     post: PropTypes.func.isRequired
@@ -23,8 +19,12 @@ export default class Form extends React.Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    this.props.post(this.state.comment);
-    this.setState({ comment: '' });
+    const res = await this.props.post(this.state.comment);
+    if (res.status === 'SUCCESS') {
+      this.setState({ comment: '' });
+    } else if (res.status === 'ERROR') {
+      // error
+    }
   }
 
   render() {
@@ -42,3 +42,8 @@ export default class Form extends React.Component {
     );
   }
 }
+
+export default connect(
+  null,
+  { post }
+)(Form);

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { setToken } from '../actions';
+import { signIn } from '../actions';
 import Popup from '../components/Popup';
 import Header from '../components/Header';
 import Form from '../components/Form';
@@ -11,17 +11,17 @@ import CommentList from '../components/CommentList';
   state => ({
     isLoggedIn: state.user.isLoggedIn,
   }),
-  { setToken }
+  { signIn }
 )
 export default class App extends React.Component {
 
   static propTypes = {
-    setToken: PropTypes.func.isRequired,
+    signIn: PropTypes.func.isRequired,
     isLoggedIn: PropTypes.bool.isRequired
   };
 
   componentDidMount = () => {
-    this.props.setToken();
+    this.props.signIn();
   }
 
   render() {

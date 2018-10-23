@@ -1,0 +1,107 @@
+exports["should render correctly(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "children": [
+        {
+          "type": "p",
+          "props": {
+            "children": "TestMan"
+          },
+          "_store": {}
+        },
+        {
+          "type": "p",
+          "props": {
+            "children": 3
+          },
+          "_store": {}
+        },
+        {
+          "type": "a",
+          "props": {
+            "children": "Test comment"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "TestMan"
+        },
+        "rendered": "TestMan"
+      },
+      {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": 3
+        },
+        "rendered": 3
+      },
+      {
+        "nodeType": "host",
+        "type": "a",
+        "props": {
+          "children": "Test comment"
+        },
+        "rendered": "Test comment"
+      }
+    ]
+  },
+  "type": "div",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "TestMan"
+        },
+        "rendered": "TestMan"
+      },
+      "type": "p",
+      "props": {},
+      "children": [
+        "TestMan"
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": 3
+        },
+        "rendered": 3
+      },
+      "type": "p",
+      "props": {},
+      "children": [
+        3
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "a",
+        "props": {
+          "children": "Test comment"
+        },
+        "rendered": "Test comment"
+      },
+      "type": "a",
+      "props": {},
+      "children": [
+        "Test comment"
+      ]
+    }
+  ]
+};
+

@@ -1,0 +1,129 @@
+exports["should render correctly(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "children": [
+        {
+          "type": "Comment",
+          "props": {
+            "bookmark": {
+              "user": {
+                "name": "TestMan",
+                "id": 3
+              },
+              "comment": "Test comment"
+            }
+          },
+          "_store": {}
+        },
+        {
+          "type": "Comment",
+          "props": {
+            "bookmark": {
+              "user": {
+                "name": "TestMan2",
+                "id": 3
+              },
+              "comment": "Test comment 2"
+            }
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "class",
+        "type": "Comment",
+        "props": {
+          "bookmark": {
+            "user": {
+              "name": "TestMan",
+              "id": 3
+            },
+            "comment": "Test comment"
+          }
+        }
+      },
+      {
+        "nodeType": "class",
+        "type": "Comment",
+        "props": {
+          "bookmark": {
+            "user": {
+              "name": "TestMan2",
+              "id": 3
+            },
+            "comment": "Test comment 2"
+          }
+        }
+      }
+    ]
+  },
+  "type": "div",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Comment",
+        "props": {
+          "bookmark": {
+            "user": {
+              "name": "TestMan",
+              "id": 3
+            },
+            "comment": "Test comment"
+          }
+        }
+      },
+      "type": "Comment",
+      "props": {
+        "bookmark": {
+          "user": {
+            "name": "TestMan",
+            "id": 3
+          },
+          "comment": "Test comment"
+        }
+      }
+    },
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Comment",
+        "props": {
+          "bookmark": {
+            "user": {
+              "name": "TestMan2",
+              "id": 3
+            },
+            "comment": "Test comment 2"
+          }
+        }
+      },
+      "type": "Comment",
+      "props": {
+        "bookmark": {
+          "user": {
+            "name": "TestMan2",
+            "id": 3
+          },
+          "comment": "Test comment 2"
+        }
+      }
+    }
+  ]
+};
+
+exports["should render correctly when no entry(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {}
+  },
+  "type": "div",
+  "props": {}
+};
+

@@ -3,7 +3,13 @@ import React, { PropTypes } from 'react';
 export default class Comment extends React.Component {
 
   static propTypes = {
-    bookmark: PropTypes.object.isRequired
+    bookmark: PropTypes.shape({
+      user: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired
+      }),
+      comment: PropTypes.string.isRequired
+    })
   };
 
   render() {

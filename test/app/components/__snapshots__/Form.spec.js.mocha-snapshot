@@ -1,0 +1,316 @@
+exports["should render correctly(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "style": {
+        "textAlign": "center"
+      },
+      "children": [
+        {
+          "type": "h1",
+          "props": {
+            "children": "Add bookmark"
+          },
+          "_store": {}
+        },
+        {
+          "type": "form",
+          "props": {
+            "onSubmit": "[function]",
+            "children": [
+              {
+                "type": "label",
+                "props": {
+                  "children": [
+                    "Comment:",
+                    {
+                      "type": "input",
+                      "props": {
+                        "type": "text",
+                        "value": "",
+                        "onChange": "[function]"
+                      },
+                      "_store": {}
+                    }
+                  ]
+                },
+                "_store": {}
+              },
+              {
+                "type": "input",
+                "props": {
+                  "type": "submit",
+                  "value": "Submit"
+                },
+                "_store": {}
+              }
+            ]
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "host",
+        "type": "h1",
+        "props": {
+          "children": "Add bookmark"
+        },
+        "rendered": "Add bookmark"
+      },
+      {
+        "nodeType": "host",
+        "type": "form",
+        "props": {
+          "onSubmit": "[function]",
+          "children": [
+            {
+              "type": "label",
+              "props": {
+                "children": [
+                  "Comment:",
+                  {
+                    "type": "input",
+                    "props": {
+                      "type": "text",
+                      "value": "",
+                      "onChange": "[function]"
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            },
+            {
+              "type": "input",
+              "props": {
+                "type": "submit",
+                "value": "Submit"
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "host",
+            "type": "label",
+            "props": {
+              "children": [
+                "Comment:",
+                {
+                  "type": "input",
+                  "props": {
+                    "type": "text",
+                    "value": "",
+                    "onChange": "[function]"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              "Comment:",
+              {
+                "nodeType": "host",
+                "type": "input",
+                "props": {
+                  "type": "text",
+                  "value": "",
+                  "onChange": "[function]"
+                }
+              }
+            ]
+          },
+          {
+            "nodeType": "host",
+            "type": "input",
+            "props": {
+              "type": "submit",
+              "value": "Submit"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "type": "div",
+  "props": {
+    "style": {
+      "textAlign": "center"
+    }
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "h1",
+        "props": {
+          "children": "Add bookmark"
+        },
+        "rendered": "Add bookmark"
+      },
+      "type": "h1",
+      "props": {},
+      "children": [
+        "Add bookmark"
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "form",
+        "props": {
+          "onSubmit": "[function]",
+          "children": [
+            {
+              "type": "label",
+              "props": {
+                "children": [
+                  "Comment:",
+                  {
+                    "type": "input",
+                    "props": {
+                      "type": "text",
+                      "value": "",
+                      "onChange": "[function]"
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            },
+            {
+              "type": "input",
+              "props": {
+                "type": "submit",
+                "value": "Submit"
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "host",
+            "type": "label",
+            "props": {
+              "children": [
+                "Comment:",
+                {
+                  "type": "input",
+                  "props": {
+                    "type": "text",
+                    "value": "",
+                    "onChange": "[function]"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              "Comment:",
+              {
+                "nodeType": "host",
+                "type": "input",
+                "props": {
+                  "type": "text",
+                  "value": "",
+                  "onChange": "[function]"
+                }
+              }
+            ]
+          },
+          {
+            "nodeType": "host",
+            "type": "input",
+            "props": {
+              "type": "submit",
+              "value": "Submit"
+            }
+          }
+        ]
+      },
+      "type": "form",
+      "props": {
+        "onSubmit": "[function]"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "label",
+            "props": {
+              "children": [
+                "Comment:",
+                {
+                  "type": "input",
+                  "props": {
+                    "type": "text",
+                    "value": "",
+                    "onChange": "[function]"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              "Comment:",
+              {
+                "nodeType": "host",
+                "type": "input",
+                "props": {
+                  "type": "text",
+                  "value": "",
+                  "onChange": "[function]"
+                }
+              }
+            ]
+          },
+          "type": "label",
+          "props": {},
+          "children": [
+            "Comment:",
+            {
+              "node": {
+                "nodeType": "host",
+                "type": "input",
+                "props": {
+                  "type": "text",
+                  "value": "",
+                  "onChange": "[function]"
+                }
+              },
+              "type": "input",
+              "props": {
+                "type": "text",
+                "value": "",
+                "onChange": "[function]"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "input",
+            "props": {
+              "type": "submit",
+              "value": "Submit"
+            }
+          },
+          "type": "input",
+          "props": {
+            "type": "submit",
+            "value": "Submit"
+          }
+        }
+      ]
+    }
+  ]
+};
+

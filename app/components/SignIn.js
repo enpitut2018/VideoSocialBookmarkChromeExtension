@@ -3,11 +3,7 @@ import { connect } from 'react-redux';
 import { signInUser } from '../utils/redux-token-auth-config';
 import { signIn } from '../actions';
 
-@connect(
-  null,
-  { signInUser, signIn },
-)
-export default class SignIn extends Component {
+export class SignIn extends Component {
 
   static propTypes = {
     signInUser: PropTypes.func.isRequired,
@@ -22,9 +18,9 @@ export default class SignIn extends Component {
     };
   }
 
-  submitForm = async (e) => {
+  submitForm = (e) => {
     e.preventDefault();
-    await this.props.signInUser({
+    this.props.signInUser({
       email: this.state.email,
       password: this.state.password
     }).then((res) => {
@@ -54,9 +50,14 @@ export default class SignIn extends Component {
             Password:
             <input type="password" value={this.state.password} onChange={this.handlePasswordChange} />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="SignIn" />
         </form>
       </div>
     );
   }
 }
+
+export default connect(
+  null,
+  { signInUser, signIn },
+)(SignIn);

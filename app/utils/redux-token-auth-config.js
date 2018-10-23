@@ -1,9 +1,8 @@
 import { generateAuthActions } from 'redux-token-auth';
-
-const backend_api_url = 'https://video-social-bookmark.herokuapp.com/api/v1';
+import { apiUrl } from '../constants';
 
 const config = {
-  authUrl: `${backend_api_url}/auth`,
+  authUrl: `${apiUrl}/auth`,
   userAttributes: {},
   userRegistrationAttributes: {},
 };

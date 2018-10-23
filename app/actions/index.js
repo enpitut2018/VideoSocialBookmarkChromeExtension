@@ -12,45 +12,34 @@ const getUrl = async () => new Promise((resolve) => {
   });
 });
 
-const fetchEntryId = async () => 5;
-
-export const setToken = () => (dispatch) => {
+export const signIn = () => (dispatch) => {
+  if (window.localStorage.getItem('access-token') === null) return;
   const keys = ['access-token', 'token-type', 'client', 'expiry', 'uid'];
   for (const key of keys) {
     axios.defaults.headers.common[key] = window.localStorage.getItem(key);
   }
-};
-
-export const signIn = () => (dispatch) => {
   dispatch({ type: SIGNIN });
-  dispatch(setToken());
 };
 
 export const post = comment => async (dispatch) => {
   const url = await getUrl();
-  axios
+  return await axios
   .post(`${apiUrl}/bookmarks`, {
     original_url: url,
     comment
   })
-  .then((res) => {
-    // success
-  })
-  .catch((_) => {
-    // error
-  });
+  .then(res => ({ status: 'SUCCESS' }))
+  .catch(err => ({
+    status: 'ERROR',
+    message: err }));
 };
 
-export const fetchEntry = () => async (dispatch) => {
-  const url = await getUrl();
-  const entryId = await fetchEntryId(url);
-  axios
-  .get(`${apiUrl}/entries/${entryId}`)
-  .then((res) => {
-    dispatch({ type: SET_ENTRY, entry: res.data });
-  })
-  .catch((_) => {
-    // error
+export const fetchEntry = () => (dispatch) => {
+  chrome.runtime.sendMessage({
+    type: 'REQUEST_ENTRY'
+  }, (res) => {
+    const entry = JSON.parse(res.entry);
+    dispatch({ type: SET_ENTRY, entry });
   });
 };
 

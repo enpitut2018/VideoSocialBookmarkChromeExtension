@@ -1,0 +1,443 @@
+exports["should render correctly(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "children": {
+        "type": "form",
+        "props": {
+          "onSubmit": "[function]",
+          "children": [
+            {
+              "type": "label",
+              "props": {
+                "children": [
+                  "Email:",
+                  {
+                    "type": "input",
+                    "props": {
+                      "type": "text",
+                      "value": "",
+                      "onChange": "[function]"
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            },
+            {
+              "type": "label",
+              "props": {
+                "children": [
+                  "Password:",
+                  {
+                    "type": "input",
+                    "props": {
+                      "type": "password",
+                      "value": "",
+                      "onChange": "[function]"
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            },
+            {
+              "type": "input",
+              "props": {
+                "type": "submit",
+                "value": "SignIn"
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "host",
+      "type": "form",
+      "props": {
+        "onSubmit": "[function]",
+        "children": [
+          {
+            "type": "label",
+            "props": {
+              "children": [
+                "Email:",
+                {
+                  "type": "input",
+                  "props": {
+                    "type": "text",
+                    "value": "",
+                    "onChange": "[function]"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "_store": {}
+          },
+          {
+            "type": "label",
+            "props": {
+              "children": [
+                "Password:",
+                {
+                  "type": "input",
+                  "props": {
+                    "type": "password",
+                    "value": "",
+                    "onChange": "[function]"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "_store": {}
+          },
+          {
+            "type": "input",
+            "props": {
+              "type": "submit",
+              "value": "SignIn"
+            },
+            "_store": {}
+          }
+        ]
+      },
+      "rendered": [
+        {
+          "nodeType": "host",
+          "type": "label",
+          "props": {
+            "children": [
+              "Email:",
+              {
+                "type": "input",
+                "props": {
+                  "type": "text",
+                  "value": "",
+                  "onChange": "[function]"
+                },
+                "_store": {}
+              }
+            ]
+          },
+          "rendered": [
+            "Email:",
+            {
+              "nodeType": "host",
+              "type": "input",
+              "props": {
+                "type": "text",
+                "value": "",
+                "onChange": "[function]"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "host",
+          "type": "label",
+          "props": {
+            "children": [
+              "Password:",
+              {
+                "type": "input",
+                "props": {
+                  "type": "password",
+                  "value": "",
+                  "onChange": "[function]"
+                },
+                "_store": {}
+              }
+            ]
+          },
+          "rendered": [
+            "Password:",
+            {
+              "nodeType": "host",
+              "type": "input",
+              "props": {
+                "type": "password",
+                "value": "",
+                "onChange": "[function]"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "host",
+          "type": "input",
+          "props": {
+            "type": "submit",
+            "value": "SignIn"
+          }
+        }
+      ]
+    }
+  },
+  "type": "div",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "form",
+        "props": {
+          "onSubmit": "[function]",
+          "children": [
+            {
+              "type": "label",
+              "props": {
+                "children": [
+                  "Email:",
+                  {
+                    "type": "input",
+                    "props": {
+                      "type": "text",
+                      "value": "",
+                      "onChange": "[function]"
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            },
+            {
+              "type": "label",
+              "props": {
+                "children": [
+                  "Password:",
+                  {
+                    "type": "input",
+                    "props": {
+                      "type": "password",
+                      "value": "",
+                      "onChange": "[function]"
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            },
+            {
+              "type": "input",
+              "props": {
+                "type": "submit",
+                "value": "SignIn"
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "host",
+            "type": "label",
+            "props": {
+              "children": [
+                "Email:",
+                {
+                  "type": "input",
+                  "props": {
+                    "type": "text",
+                    "value": "",
+                    "onChange": "[function]"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              "Email:",
+              {
+                "nodeType": "host",
+                "type": "input",
+                "props": {
+                  "type": "text",
+                  "value": "",
+                  "onChange": "[function]"
+                }
+              }
+            ]
+          },
+          {
+            "nodeType": "host",
+            "type": "label",
+            "props": {
+              "children": [
+                "Password:",
+                {
+                  "type": "input",
+                  "props": {
+                    "type": "password",
+                    "value": "",
+                    "onChange": "[function]"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              "Password:",
+              {
+                "nodeType": "host",
+                "type": "input",
+                "props": {
+                  "type": "password",
+                  "value": "",
+                  "onChange": "[function]"
+                }
+              }
+            ]
+          },
+          {
+            "nodeType": "host",
+            "type": "input",
+            "props": {
+              "type": "submit",
+              "value": "SignIn"
+            }
+          }
+        ]
+      },
+      "type": "form",
+      "props": {
+        "onSubmit": "[function]"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "label",
+            "props": {
+              "children": [
+                "Email:",
+                {
+                  "type": "input",
+                  "props": {
+                    "type": "text",
+                    "value": "",
+                    "onChange": "[function]"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              "Email:",
+              {
+                "nodeType": "host",
+                "type": "input",
+                "props": {
+                  "type": "text",
+                  "value": "",
+                  "onChange": "[function]"
+                }
+              }
+            ]
+          },
+          "type": "label",
+          "props": {},
+          "children": [
+            "Email:",
+            {
+              "node": {
+                "nodeType": "host",
+                "type": "input",
+                "props": {
+                  "type": "text",
+                  "value": "",
+                  "onChange": "[function]"
+                }
+              },
+              "type": "input",
+              "props": {
+                "type": "text",
+                "value": "",
+                "onChange": "[function]"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "label",
+            "props": {
+              "children": [
+                "Password:",
+                {
+                  "type": "input",
+                  "props": {
+                    "type": "password",
+                    "value": "",
+                    "onChange": "[function]"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              "Password:",
+              {
+                "nodeType": "host",
+                "type": "input",
+                "props": {
+                  "type": "password",
+                  "value": "",
+                  "onChange": "[function]"
+                }
+              }
+            ]
+          },
+          "type": "label",
+          "props": {},
+          "children": [
+            "Password:",
+            {
+              "node": {
+                "nodeType": "host",
+                "type": "input",
+                "props": {
+                  "type": "password",
+                  "value": "",
+                  "onChange": "[function]"
+                }
+              },
+              "type": "input",
+              "props": {
+                "type": "password",
+                "value": "",
+                "onChange": "[function]"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "input",
+            "props": {
+              "type": "submit",
+              "value": "SignIn"
+            }
+          },
+          "type": "input",
+          "props": {
+            "type": "submit",
+            "value": "SignIn"
+          }
+        }
+      ]
+    }
+  ]
+};
+

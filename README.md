@@ -1,6 +1,12 @@
 # Video Social Bookmark Chrome Extension
 [![Build Status](https://travis-ci.com/enpitut2018/VideoSocialBookmarkChromeExtension.svg?branch=master)](https://travis-ci.com/enpitut2018/VideoSocialBookmarkChromeExtension)
 
+## 入れ方
+- `yarn`
+- `yarn dev`
+- `chrome://extension`を開いて/debディレクトリを選択
+- `見れる`
+
 **this project use ↓ boilerplate**
 
 ## React Chrome Extension Boilerplate

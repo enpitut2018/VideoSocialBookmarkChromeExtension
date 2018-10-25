@@ -28,7 +28,7 @@ export const post = comment => async (dispatch) => {
     original_url: url,
     comment
   })
-  .then(res => ({ status: 'SUCCESS' }))
+  .then(res => ({ status: 'SUCCESS', data: res.data }))
   .catch(err => ({
     status: 'ERROR',
     message: err }));

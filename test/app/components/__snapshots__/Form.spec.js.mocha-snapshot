@@ -44,7 +44,17 @@ exports["should render correctly(0)"] = {
                   "value": "Submit"
                 },
                 "_store": {}
-              }
+              },
+              {
+                "type": "input",
+                "props": {
+                  "type": "checkbox",
+                  "checked": true,
+                  "onChange": "[function]"
+                },
+                "_store": {}
+              },
+              "Twitterに投稿する"
             ]
           },
           "_store": {}
@@ -91,7 +101,17 @@ exports["should render correctly(0)"] = {
                 "value": "Submit"
               },
               "_store": {}
-            }
+            },
+            {
+              "type": "input",
+              "props": {
+                "type": "checkbox",
+                "checked": true,
+                "onChange": "[function]"
+              },
+              "_store": {}
+            },
+            "Twitterに投稿する"
           ]
         },
         "rendered": [
@@ -132,7 +152,17 @@ exports["should render correctly(0)"] = {
               "type": "submit",
               "value": "Submit"
             }
-          }
+          },
+          {
+            "nodeType": "host",
+            "type": "input",
+            "props": {
+              "type": "checkbox",
+              "checked": true,
+              "onChange": "[function]"
+            }
+          },
+          "Twitterに投稿する"
         ]
       }
     ]
@@ -191,7 +221,17 @@ exports["should render correctly(0)"] = {
                 "value": "Submit"
               },
               "_store": {}
-            }
+            },
+            {
+              "type": "input",
+              "props": {
+                "type": "checkbox",
+                "checked": true,
+                "onChange": "[function]"
+              },
+              "_store": {}
+            },
+            "Twitterに投稿する"
           ]
         },
         "rendered": [
@@ -232,7 +272,17 @@ exports["should render correctly(0)"] = {
               "type": "submit",
               "value": "Submit"
             }
-          }
+          },
+          {
+            "nodeType": "host",
+            "type": "input",
+            "props": {
+              "type": "checkbox",
+              "checked": true,
+              "onChange": "[function]"
+            }
+          },
+          "Twitterに投稿する"
         ]
       },
       "type": "form",
@@ -308,7 +358,25 @@ exports["should render correctly(0)"] = {
             "type": "submit",
             "value": "Submit"
           }
-        }
+        },
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "input",
+            "props": {
+              "type": "checkbox",
+              "checked": true,
+              "onChange": "[function]"
+            }
+          },
+          "type": "input",
+          "props": {
+            "type": "checkbox",
+            "checked": true,
+            "onChange": "[function]"
+          }
+        },
+        "Twitterに投稿する"
       ]
     }
   ]

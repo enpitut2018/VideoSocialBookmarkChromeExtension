@@ -3,21 +3,19 @@ import React, { PropTypes } from 'react';
 export default class Comment extends React.Component {
 
   static propTypes = {
-    bookmark: PropTypes.shape({
+    comment: PropTypes.shape({
       user: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        id: PropTypes.number.isRequired
+        name: PropTypes.string.isRequired
       }),
-      comment: PropTypes.string.isRequired
+      content: PropTypes.string.isRequired
     })
   };
 
   render() {
     return (
       <div>
-        <p>{this.props.bookmark.user.name || 'NoName'}</p>
-        <p>{this.props.bookmark.user.id}</p>
-        <a>{this.props.bookmark.comment}</a>
+        <p>{this.props.comment.user.name || 'NoName'}</p>
+        <a>{this.props.comment.content}</a>
       </div>
     );
   }

@@ -7,7 +7,7 @@ export class CommentList extends React.Component {
 
   static propTypes = {
     entry: PropTypes.shape({
-      bookmarks: PropTypes.array
+      comments: PropTypes.array
     }),
     fetchEntry: PropTypes.func.isRequired
   };
@@ -19,9 +19,13 @@ export class CommentList extends React.Component {
   render() {
     return (
       <div>
+        {/* サムネイルの表示
+          this.props.entry &&
+          <img src={this.props.entry.thumbnail_url} alt="pm" />
+        */}
         {this.props.entry &&
-          this.props.entry.bookmarks.map(bookmark => (
-            <Comment bookmark={bookmark} key={bookmark.id} />
+          this.props.entry.comments.filter(comment => comment.content.length !== 0).map(comment => (
+            <Comment comment={comment} key={comment.id} />
         ))}
       </div>
     );

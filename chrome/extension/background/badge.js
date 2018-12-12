@@ -49,8 +49,8 @@ chrome.runtime.onMessage.addListener(async (req, sender, res) => {
 chrome.tabs.onActivated.addListener(async (activeInfo) => {
   const entry = await fetchEntry();
   if (entry) currentTabEntry = entry;
-  if (entry && entry.bookmarks) {
-    const count = entry.bookmarks.length;
+  if (entry && entry.comments) {
+    const count = entry.comments.length;
     chrome.browserAction.setBadgeText({ text: count > 0 ? count.toString() : '' });
   } else {
     // Initial

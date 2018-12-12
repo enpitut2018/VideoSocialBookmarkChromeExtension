@@ -24,9 +24,13 @@ export const signIn = () => (dispatch) => {
 export const post = comment => async (dispatch) => {
   const url = await getUrl();
   return await axios
-  .post(`${apiUrl}/bookmarks`, {
-    original_url: url,
-    comment
+  .post(`${apiUrl}/entries`, {
+    entry: {
+      original_url: url
+    },
+    comment: {
+      content: comment
+    }
   })
   .then(res => ({ status: 'SUCCESS', data: res.data }))
   .catch(err => ({

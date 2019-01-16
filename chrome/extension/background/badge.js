@@ -10,12 +10,12 @@ const getUrl = async () => new Promise((resolve) => {
   });
 });
 
-let c = true;
-
-const fetchEntryId = () => {
-  c = !c;
-  return c ? 5 : 8;
-};
+const fetchEntryId = async url =>
+  // testdata: const url = 'https://www.youtube.com/watch?v=HGJK1IKIvrI';
+   await axios
+  .get(`${apiUrl}/find/?url=${url}`)
+  .then(res => res.data.id
+  );
 
 let currentTabEntry = null;
 
@@ -36,7 +36,9 @@ const fetchEntry = async () => {
 chrome.runtime.onMessage.addListener(async (req, sender, res) => {
   switch (req.type) {
     case 'REQUEST_ENTRY':
-      if (currentTabEntry === null) currentTabEntry = await fetchEntry();
+      if (currentTabEntry === null) {
+        currentTabEntry = await fetchEntry();
+      }
       res({
         entry: JSON.stringify(currentTabEntry)
       });
@@ -54,6 +56,6 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
     chrome.browserAction.setBadgeText({ text: count > 0 ? count.toString() : '' });
   } else {
     // Initial
-    chrome.browserAction.setBadgeText({ text: '!' });
+    chrome.browserAction.setBadgeText({ text: '' });
   }
 });

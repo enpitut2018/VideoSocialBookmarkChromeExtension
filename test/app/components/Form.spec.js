@@ -9,7 +9,14 @@ function timeout(ms) {
 
 function setup(propOverrides) {
   const props = {
-    post: comment => ({ status: 'SUCCESS' }),
+    post: comment => ({
+      status: 'SUCCESS',
+      data: {
+        entry: {
+          title: 'HogeMovie',
+          id: 1
+        }
+      } }),
     ...propOverrides
   };
   const wrapper = shallow(<Form {...props} />);
@@ -25,6 +32,7 @@ describe('<Form />', () => {
   it('should reset value on post with status=SUCCESS', async () => {
     const { wrapper } = setup();
     wrapper.find('input[type="text"]').simulate('change', { target: { value: 'Hello' } });
+    wrapper.find('input[type="checkbox"]').simulate('change', { target: { checked: false } });
     wrapper.find('form').simulate('submit', { preventDefault: () => {} });
     await timeout(10);
     expect(wrapper.find('input[type="text"]').props().value).to.equal('');
@@ -33,6 +41,7 @@ describe('<Form />', () => {
   it('should not reset value on post with status=ERROR', async () => {
     const { wrapper } = setup({ post: comment => ({ status: 'ERROR' }) });
     wrapper.find('input[type="text"]').simulate('change', { target: { value: 'Hello' } });
+    wrapper.find('input[type="checkbox"]').simulate('change', { target: { checked: false } });
     wrapper.find('form').simulate('submit', { preventDefault: () => {} });
     await timeout(10);
     expect(wrapper.find('input[type="text"]').props().value).to.equal('Hello');

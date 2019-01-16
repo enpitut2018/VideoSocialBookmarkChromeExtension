@@ -7,6 +7,8 @@ exports["should render correctly(0)"] = {
         "type": "a",
         "props": {
           "href": "https://video-social-bookmark.herokuapp.com",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
           "children": "VideoSocialBookmark"
         },
         "_store": {}
@@ -17,6 +19,8 @@ exports["should render correctly(0)"] = {
       "type": "a",
       "props": {
         "href": "https://video-social-bookmark.herokuapp.com",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
         "children": "VideoSocialBookmark"
       },
       "rendered": "VideoSocialBookmark"
@@ -31,13 +35,17 @@ exports["should render correctly(0)"] = {
         "type": "a",
         "props": {
           "href": "https://video-social-bookmark.herokuapp.com",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
           "children": "VideoSocialBookmark"
         },
         "rendered": "VideoSocialBookmark"
       },
       "type": "a",
       "props": {
-        "href": "https://video-social-bookmark.herokuapp.com"
+        "href": "https://video-social-bookmark.herokuapp.com",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
       },
       "children": [
         "VideoSocialBookmark"

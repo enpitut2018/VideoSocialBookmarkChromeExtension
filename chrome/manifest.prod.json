@@ -18,6 +18,12 @@
   "background": {
     "page": "background.html"
   },
-  "permissions": [ "contextMenus", "tabs", "storage", "https://github.com/*", "https://video-social-bookmark.herokuapp.com/*"  ],
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage",
+    "https://github.com/*",
+    "https://video-social-bookmark.herokuapp.com/*"
+  ],
   "content_security_policy": "default-src 'self'; script-src 'self'; connect-src https://video-social-bookmark.herokuapp.com; style-src * 'unsafe-inline'; img-src 'self' data:;"
 }

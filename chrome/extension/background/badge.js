@@ -36,9 +36,7 @@ const fetchEntry = async () => {
 chrome.runtime.onMessage.addListener(async (req, sender, res) => {
   switch (req.type) {
     case 'REQUEST_ENTRY':
-      if (currentTabEntry === null) {
-        currentTabEntry = await fetchEntry();
-      }
+      console.log('current tab entry:', currentTabEntry);
       res({
         entry: JSON.stringify(currentTabEntry)
       });
@@ -49,6 +47,20 @@ chrome.runtime.onMessage.addListener(async (req, sender, res) => {
 });
 
 chrome.tabs.onActivated.addListener(async (activeInfo) => {
+  console.log('activated');
+  const entry = await fetchEntry();
+  if (entry) currentTabEntry = entry;
+  if (entry && entry.comments) {
+    const count = entry.comments.length;
+    chrome.browserAction.setBadgeText({ text: count > 0 ? count.toString() : '' });
+  } else {
+    // Initial
+    chrome.browserAction.setBadgeText({ text: '' });
+  }
+});
+
+chrome.tabs.onUpdated.addListener(async (activeInfo) => {
+  console.log('updated');
   const entry = await fetchEntry();
   if (entry) currentTabEntry = entry;
   if (entry && entry.comments) {

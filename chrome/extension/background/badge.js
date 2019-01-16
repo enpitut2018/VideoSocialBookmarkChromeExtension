@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrl = 'https://video-social-bookmark-develop.herokuapp.com/api/v1';
+const apiUrl = 'https://video-social-bookmark.herokuapp.com/api/v1';
 
 const getUrl = async () => new Promise((resolve) => {
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {

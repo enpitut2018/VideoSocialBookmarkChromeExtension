@@ -13,9 +13,9 @@ export default class Comment extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>{this.props.comment.user.name || 'NoName'}</p>
-        <a>{this.props.comment.content}</a>
+      <div style={{ marginLeft: '10px' }}>
+        <p style={{ fontSize: '14px', fontWeight: 'bold' }}>{this.props.comment.user.name || 'NoName'}</p>
+        <p style={{ fontSize: '16px', margin: '3px' }}>{this.props.comment.content}</p>
       </div>
     );
   }

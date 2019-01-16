@@ -4,7 +4,7 @@ const styles = {
   popup: {
     font: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
     lineHeight: '1.4em',
-    background: '#f5f5f5',
+    background: '#fff',
     color: '#4d4d4d',
     minWidth: '230px',
     maxWidth: '550px',

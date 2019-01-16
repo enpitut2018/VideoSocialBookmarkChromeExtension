@@ -49,7 +49,7 @@ chrome.runtime.onMessage.addListener(async (req, sender, res) => {
 chrome.tabs.onActivated.addListener(async (activeInfo) => {
   console.log('activated');
   const entry = await fetchEntry();
-  if (entry) currentTabEntry = entry;
+  currentTabEntry = entry;
   if (entry && entry.comments) {
     const count = entry.comments.length;
     chrome.browserAction.setBadgeText({ text: count > 0 ? count.toString() : '' });
@@ -62,7 +62,7 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
 chrome.tabs.onUpdated.addListener(async (activeInfo) => {
   console.log('updated');
   const entry = await fetchEntry();
-  if (entry) currentTabEntry = entry;
+  currentTabEntry = entry;
   if (entry && entry.comments) {
     const count = entry.comments.length;
     chrome.browserAction.setBadgeText({ text: count > 0 ? count.toString() : '' });
